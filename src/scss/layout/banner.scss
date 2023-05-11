@@ -1,0 +1,199 @@
+.banner {
+    position: relative;
+    padding-top: rem(163);
+    padding-bottom: rem(72);
+    top: rem(-83);
+    @media(max-width:1440px){
+        padding-top: rem(143);
+    }
+    @media(max-width:1280px){
+        padding-top: rem(97);
+        padding-bottom: rem(38.6);
+    }
+    @media(max-width:520px){
+        padding-top: rem(64);
+        padding-bottom: rem(33);
+        top: rem(-64);
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url(@img/banner-fon.png) no-repeat center center / cover;
+        z-index: -1;
+      }
+    &__container {
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__body {
+        position: relative;
+        margin-top: rem(98);
+        flex: 0 1 auto;
+        @media(max-width:1700px){
+            margin-top: rem(148);
+        }
+        @media(max-width:1280px){
+            margin-top: rem(30);
+            z-index: 4;
+        }
+        @media(max-width:520px){
+            margin-top: rem(33);
+        }
+
+    }
+
+    &__title {
+        max-width: rem(564);
+        margin-bottom: rem(35);
+        h1 {
+            font-weight: 700;
+            font-size: rem(49);
+            line-height: 140%;
+
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            color: #FFFFFF;
+        }
+        @media(max-width:1280px){
+            margin-bottom: rem(24);
+            h1 {
+                font-size: rem(39);
+            }
+        }
+        @media(max-width:720px){
+            max-width: rem(278);
+            h1 {
+                font-size: rem(25);
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: rem(94);
+        p {
+            color: #FFFFFF;
+        }
+        @media(max-width:1280px){
+            margin-bottom: rem(44);
+            p {
+                font-size: rem(16);
+            }
+        }
+        @media(max-width:860px){
+            margin-bottom: rem(135);
+        }
+        @media(max-width:720px){
+            max-width: rem(173);
+            p {
+                font-size: rem(13);
+            }
+        }
+    }
+
+
+    &__row-button {
+    }
+
+    &__button {
+        max-width: rem(408);
+        @media(max-width:1280px){
+            padding: rem(16);
+        }
+    }
+
+    &__contain-img {
+        position: relative;
+        // flex: 0 1 50%;
+        width: rem(650);
+        height: rem(637);
+
+        @media(max-width:1280px){
+            width: rem(370);
+            height: rem(362.6);
+        }
+        @media(max-width:860px){
+            width: rem(314.41);
+            height: rem(308.12);
+            position: absolute;
+            top: rem(4);
+            right: 0;
+        }
+    }
+
+    &__img1 {
+        position: absolute;
+        left: rem(40);
+        bottom: 0;
+        width: rem(206);
+        height: rem(206);
+        z-index: 2;
+        img {
+            width: 100%;
+        }
+        @media(max-width:1280px){
+            width: rem(117.26);
+            height: rem(117.26);
+        }
+        @media(max-width:860px){
+            width: rem(104);
+            height: rem(100);
+            left: rem(28);
+        }
+    }
+
+    &__img2 {
+        position: absolute;
+        right: 0;
+        top: rem(6);
+        width: rem(237.43);
+        height: rem(237.43);
+        z-index: 2;
+        
+        @media(max-width:1280px){
+            width: rem(135.15);
+            height: rem(135.15);
+        }
+        @media(max-width:860px){
+            width: rem(92);
+            height: rem(92);
+            top: rem(32.12);
+        }
+    }
+
+    &__img3 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: rem(427.61);
+        height: ren(427.61);
+        
+        @media(max-width:1280px){
+            width: rem(243.41);
+            height: rem(243.41);
+        }
+        @media(max-width:1280px){
+            width: rem(243.41);
+            height: rem(243.41);
+        }
+        @media(max-width:860px){
+            width: rem(182);
+            height: rem(182);
+        }
+    }
+
+    &__img-circle {
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+}
