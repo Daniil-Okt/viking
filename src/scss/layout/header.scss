@@ -12,7 +12,8 @@
     }
   }
   &__row {
-    
+    position: relative;
+    z-index: 1;
   }
 
   &__logo {
