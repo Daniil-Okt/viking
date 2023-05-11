@@ -1,5 +1,5 @@
 .history {
-    @media(max-width:850px){
+    @media(max-width:860px){
         padding-bottom: rem(40);
     }
     &__container {
@@ -16,7 +16,7 @@
         @media(max-width:1200px){
             margin-top: rem(42);
         }
-        @media(max-width:850px){
+        @media(max-width:860px){
             flex-direction: column-reverse;
         }
     }
@@ -34,7 +34,7 @@
         }
     }
 
-    &__img {
+    &__img, .img-contain {
         flex: 0 1 50%;
         max-width: rem(828);
         img {
@@ -45,7 +45,7 @@
                 width: 120%;
             }
         }
-        @media(max-width:850px){
+        @media(max-width:860px){
             margin-bottom: rem(16);
             img {
                 width: 100%;
@@ -64,7 +64,7 @@
         @media(max-width:1440px){
             margin-top: rem(-25);
         }
-        @media(max-width:850px){
+        @media(max-width:860px){
             flex-direction: column;
             margin-top: 0;
         }
@@ -91,7 +91,7 @@
         @media(max-width:1440px){
             align-items: end;
         }
-        @media(max-width:850px){
+        @media(max-width:860px){
             align-items: center;
         }
         @media(max-width:450px){
