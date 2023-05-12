@@ -1,6 +1,8 @@
 // =====================================================================================================================
 .header {
   width: 100%;
+  position: relative;
+  z-index: 10;
   // background-color: $blueColor;
   // .header__container
   &__container {
@@ -29,10 +31,9 @@
     @media(max-width:1400px){
       @include adaptiveClamp(margin-right, 42.5, 42.5);
     }
-    @media(max-width:970px){
-        margin-right: auto;
-    }
+    
     @media(max-width:520px){
+      @include adaptiveClamp(margin-right, 36, 36);
       width: rem(26.57);
       height: rem(34);
     }
@@ -48,6 +49,9 @@
     justify-content: space-between;
     margin-top: rem(3.5);
     gap: rem(15);
+    @media(max-width:970px){
+      margin-left: auto;
+  }
     @media(max-width:520px){
         gap: rem(8);
     }
@@ -98,7 +102,7 @@
       @include adaptiveClamp(margin-left, 55.13, 55.13);
     }
     @media(max-width:520px){
-      @include adaptiveClamp(margin-left, 47.13, 47.13);
+      @include adaptiveClamp(margin-left, 40, 40);
     }
     a {
       font-weight: 
@@ -146,7 +150,7 @@
     height: rem(128);
     padding: rem(16);
     
-    z-index: 5;
+    z-index: 10;
     transition: all 0.5s ease  0s;
 
     background-color: #0D1C2E;

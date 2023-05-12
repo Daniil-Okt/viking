@@ -21,7 +21,7 @@ import {
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-// import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper'
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = true
@@ -93,3 +93,49 @@ menuInit()
 // spollerInit()
 
 // =======================================================================================================
+const swiperRewiews = new Swiper('.swiper-reviews', {
+  speed: 600,
+  spaceBetween: 400,
+  slidesPerView: 1,
+  slideToClickedSlide: true,
+  modules: [Autoplay, Navigation],
+  navigation: {
+    nextEl: '.swiper-reviews__button-next',
+    prevEl: '.swiper-reviews__button-back',
+  },
+  // autoplay: {
+  //   delay: 3000,
+  //   stopOnLastSlide: false,
+  //   disableOnIteration: false,
+  // },
+})
+
+const swiperButtonNext = document.querySelectorAll('.swiper-reviews__button-next')
+const swiperButtonBack = document.querySelectorAll('.swiper-reviews__button-back')
+const allSlidesRewiews = document.querySelectorAll('.swiper-reviews-slide')
+let paginatorRewiews =  document.querySelectorAll('.paginator-rewiews__now')
+let i = 1;
+if (swiperButtonNext.length > 0) {
+  swiperButtonNext.forEach(button => {
+    button.addEventListener('click', () => {
+      if (i < allSlidesRewiews.length) {
+        i++
+        paginatorRewiews.forEach(paginator => {
+          paginator.textContent = i;
+        });
+      }
+    })
+  });
+}
+if (swiperButtonBack.length > 0) {
+  swiperButtonBack.forEach(button => {
+    button.addEventListener('click', () => {
+      if (i > 1) {
+        i = i - 1
+        paginatorRewiews.forEach(paginator => {
+          paginator.textContent = i;
+        });
+      }
+    })
+  });
+}
