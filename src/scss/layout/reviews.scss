@@ -65,7 +65,7 @@
         &:not(:first-child) {
             flex: 0 1 33.33333%;
             
-            @media(max-width:1200px){
+            @media(max-width:1000px){
                 max-height: rem(80);
             }
             @media(max-width:520px){

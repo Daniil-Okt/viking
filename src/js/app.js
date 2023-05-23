@@ -63,7 +63,7 @@ menuInit()
 * На кнопку для закрытия окна добавь класс button-close
 */
 /* Раскомментировать для использования */
-// togglePopupWindows()
+togglePopupWindows()
 // =======================================================================================================
 
 /*Динамический адаптив ===================================================================================
@@ -71,8 +71,8 @@ menuInit()
 * data-da="class блока куда нужно перебросить, брекпоинт(ширина экрана), позиция в блоке(цифра либо first,last)"
 */
 /*Расскоментировать для использования*/
-// import { useDynamicAdapt } from './modules/dynamicAdapt.js'
-// useDynamicAdapt()
+import { useDynamicAdapt } from './modules/dynamicAdapt.js'
+useDynamicAdapt()
 // =======================================================================================================
 
 
@@ -103,13 +103,18 @@ const swiperRewiews = new Swiper('.swiper-reviews', {
     nextEl: '.swiper-reviews__button-next',
     prevEl: '.swiper-reviews__button-back',
   },
-  // autoplay: {
-  //   delay: 3000,
-  //   stopOnLastSlide: false,
-  //   disableOnIteration: false,
-  // },
 })
-
+const quisSwiper = new Swiper('.quis__swiper', {
+  speed: 600,
+  spaceBetween: 400,
+  slidesPerView: 1,
+  slideToClickedSlide: true,
+  modules: [Autoplay, Navigation],
+  navigation: {
+    nextEl: '.quis__button-next',
+    prevEl: '.quis__button-back',
+  },
+})
 const swiperButtonNext = document.querySelectorAll('.swiper-reviews__button-next')
 const swiperButtonBack = document.querySelectorAll('.swiper-reviews__button-back')
 const allSlidesRewiews = document.querySelectorAll('.swiper-reviews-slide')
@@ -139,3 +144,28 @@ if (swiperButtonBack.length > 0) {
     })
   });
 }
+
+const checkboxQuizItem = document.querySelectorAll('.checkbox-quiz__item');
+const checkboxQuizLabel = document.querySelectorAll('.checkbox-quiz__label');
+
+if (checkboxQuizLabel.length > 0) {
+  checkboxQuizLabel.forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentNode.classList.toggle('_active');
+    });
+  });
+}
+
+
+
+const wrapper = document.querySelector('.wrapper')
+
+window.onscroll = onScroll;
+  function onScroll() {
+    var top = window.pageYOffset;
+    if (top > 60) {
+      wrapper.classList.add('hide');
+    } else {
+      wrapper.classList.remove('hide');
+    }
+  }

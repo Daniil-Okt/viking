@@ -18,6 +18,9 @@
         @media(max-width:850px){
             margin-bottom: rem(24);
         }
+        @media(max-width:480px){
+            text-align: center;
+        }
     }
 
     &__row {
@@ -44,13 +47,15 @@
             @media(max-width:860px){
                 width: 100%;
                 left: 0;
+                
             }
         }
-        @media(max-width:850px){
+        @media(max-width:860px){
             margin-bottom: rem(16);
             img {
-                width: 100%;
+                width: 110%;
             }
+            margin: 0 rem(-12);
         }
         @media(max-width:500px){
             img {

@@ -1,0 +1,403 @@
+.quis {
+    position: fixed;
+    // position: relative;
+    background: #0d1c2e9d;
+    // margin: auto;
+    
+
+    width: 100%;
+    height: 100%;
+    &__row {
+        top: 110px;
+        position: relative;
+        
+        max-width: 1920px;
+        margin: auto;
+        
+        @media(max-width:860px){
+            padding: rem(42) 0 rem(40) 0;
+    }
+    }
+    &__container {
+        
+    }
+    &__button-close {
+        display: block;
+        position: absolute;
+        top: rem(10);
+        right: rem(10);
+        background: none;
+        width: rem(21);
+        height: rem(21);
+        cursor: pointer;
+        z-index: 2;
+        
+        &::before,
+        &::after {
+        content: "";
+        transition: all 300ms ease 0ms;
+        
+        position: absolute;
+        width: 100%;
+        height: rem(2);
+        background: $whiteColor;
+        border-radius: 50px;
+        }
+        &::before {
+            top: calc(50% - rem(1));
+            transform: rotate(-45deg);
+            width: 100%;
+        }
+        &::after {
+          bottom: calc(50% - rem(1));
+          transform: rotate(45deg);
+          width: 100%;
+        }
+    }
+    &__form {
+    }
+
+    &__swiper {
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: #0D1C2E;
+        padding: rem(125) 0 rem(131) 0;
+    }
+
+    &__title {
+        text-align: center;
+        h2 {
+            color: $whiteColor;
+            font-size: rem(31);
+            @media(max-width:520px){
+                font-size: rem(20);
+            }
+        }
+        @media(max-width:640px){
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__button-row {
+        display: flex;
+        gap: rem(64);
+        margin-top: rem(36);
+        margin-bottom: rem(24);
+        @media(max-width:860px){
+            margin: rem(15) 0;
+        }
+    }
+
+    &__button-back, &__button-next {
+        cursor: pointer;
+
+        position: relative;
+        color: $whiteColor;
+        &::before {
+            position: absolute;
+            content: '';
+            width: rem(24);
+            height: rem(24);
+            
+            top: rem(-5);
+            background: url(@img/quiz-icon-button.svg) no-repeat center center / contain;
+        }
+    }
+    &__button-back {
+        padding-left: rem(26);
+        &::before {
+            left: 0;
+        }
+    }
+    &__button-next {
+        padding-right: rem(26);
+        &::before {
+            right: 0;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__paginator {
+        position: relative;
+        max-width: rem(893);
+        width: 100%;
+        height: rem(70);
+        display: flex;
+
+        background-color: $whiteColor;
+        border-radius: 14px;
+        box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.1), 6px 9px 40px rgba(48, 49, 55, 0.54);
+        img {
+            height: rem(70);
+            
+        }
+        box-sizing: border-box;
+        @media(max-width:520px){
+            max-height: rem(53.85);
+        }
+    }
+    &__paginator1 {
+        img {
+            @include adaptiveClamp(width, 120, 50);
+            height: 100%;
+            max-height: rem(70);
+            
+        }
+    }
+    &__paginator2 {
+        img {
+            
+            @include adaptiveClamp(width, 569, 216);
+            height: 100%;
+            max-height: rem(70);
+        }
+    }
+    &__paginator3 {
+        img {
+            @include adaptiveClamp(width, 863, 311);
+            height: 100%;
+            max-height: rem(70);
+        }
+    }
+    &__paginator4 {
+        background-color: #00A7F5;
+    }
+
+    &__pagin-number {
+        position: absolute;
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 140%;
+        left: 48%;
+        top: 35%;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        color: #0D1C2E;
+    }
+
+    &__img {
+        position: relative;
+        left: 0;
+        max-width: 100%;
+    }
+}
+.form-quis {
+
+    &__body {
+        max-width: rem(425);
+        width: 100%;
+        max-height: rem(425);
+        height: rem(425);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media(max-width:640px){
+            min-height: rem(184);
+            height: 100%;
+            // max-height: rem(0);
+            justify-content: start;
+        }
+    }
+
+    &__item {
+        
+        width: 100%;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+        display: flex;
+        @media(max-width:520px){
+            max-height: rem(42);
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(12) rem(15) rem(12) rem(12);
+        @media(max-width:520px){
+            padding: rem(8) rem(15) rem(8) rem(12);
+
+        }
+    }
+
+    &__input {
+        cursor: pointer;
+        border-radius: 0 10px 10px 0;
+        width: 100%;
+        padding: rem(12) rem(11);
+        background: transparent;
+
+        border-left: 1px solid #FFFFFF;
+
+        font-size: rem(20);
+        line-height: 140%;
+
+        color: #FFFFFF;
+        &::placeholder {
+            font-size: rem(20);
+            line-height: 140%;
+
+            color: #FFFFFF;
+        }
+    }
+}
+.form-quis {
+
+    &__checkbox {
+    }
+    &__body-checkbox {
+        max-width: rem(570);
+    }
+}
+.checkbox-quiz {
+        max-width: rem(570);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @media(max-width:640px){
+            max-width: rem(325);
+        }
+    &__item {
+        cursor: pointer;
+
+        position: relative;
+        max-width: rem(160);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: rem(39.5) rem(48) rem(0) rem(48);
+
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        transition: all 0.3s ease  0s;
+        &::before {
+            position: absolute;
+            content: '';
+            width: rem(11);
+            height: rem(8);
+            
+            background: url(@img/checkbox-ok.svg) no-repeat center center / contain;
+
+            top: rem(-3);
+            right: rem(-5);
+            z-index: 5;
+            opacity: 0;
+            transition: all 0.25s ease  0s;
+            
+        }
+        &._active::before {
+            opacity: 1;
+        }
+        &._active {
+            background: rgba(255, 255, 255, 0.1)
+        }
+        @media(max-width:rem(640)){
+            max-width: rem(87.97);
+            padding: rem(21) rem(28) rem(0) rem(28);
+
+        }
+    }
+
+    &__img {
+        margin-bottom: rem(11);
+        max-width: rem(54);
+        img {
+            width: 100%;
+        }
+        @media(max-width:640px){
+            margin-bottom: rem(5);
+        }
+    }
+
+    &__text {
+        font-size: rem(20);
+        line-height: 140%;
+
+        color: #FFFFFF;
+        margin-bottom: rem(27);
+        @media(max-width:640px){
+            margin-bottom: rem(13);
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        cursor: pointer;
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        // z-index: -1;
+        &::before {
+            position: absolute;
+            content: '';
+            width: rem(32);
+            height: rem(32);
+            border-radius: 50%;
+            background-color: #0D1C2E;
+            border: 1px solid #FFFFFF;
+
+            top: rem(-15);
+            right: rem(-15);
+            transition: all 0.25s ease  0s;
+            ._active & {
+                background-color: #8AC44B;
+                border: 1px solid #8AC44B;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: rem(6);
+            height: rem(2);
+            border: 1px solid #FFFFFF;
+
+            top: rem(0);
+            right: rem(-2);
+            opacity: 1;
+            transition: all 0.3s ease  0s;
+            ._active & {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+.form-quis {
+
+    &__button {
+        margin-top: rem(16);
+    }
+}
+.button {
+}
+
+
+
+.swiper-wrapper {
+}
+.swiper-slide {
+}

@@ -20,6 +20,7 @@
 */
 // @import 'libs/aos';
 @import 'libs/swiper';
+@import 'libs/air-datepicker';
 
 // Подлючение кастомного скрола для всего сайта =======================================================================================================================
 @import 'config/scrollbar';
@@ -38,3 +39,8 @@
 @import 'layout/programm';
 @import 'layout/servic';
 @import 'layout/reviews';
+@import 'layout/dakkar';
+@import 'layout/event';
+@import 'layout/quest';
+@import 'layout/quiz';
+@import 'layout/popup';

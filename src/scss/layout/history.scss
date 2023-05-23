@@ -8,6 +8,11 @@
     
 
     &__title {
+        h2 {
+            @media(max-width:480px){
+                text-align: center;
+            }
+        }
     }
 
     &__row {
@@ -48,8 +53,9 @@
         @media(max-width:860px){
             margin-bottom: rem(16);
             img {
-                width: 100%;
+                width: 105%;
             }
+            margin: 0 rem(-12);
         }
         @media(max-width:500px){
             img {
